@@ -1,0 +1,328 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: #ffffff; 
+  font-family: 'Roboto', sans-serif;
+}
+
+.dynamic-form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  position: relative; 
+  flex-grow: 1;
+  margin-top: 10px;
+}
+
+.form-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.dynamic-form {
+  width: 95%;
+  max-width: 1200px;
+  background-color: transparent; /* Change background to white */
+  padding: 20px;
+  border-radius: 8px; /* Add rounded corners */
+  display: flex;
+  flex-direction: column; /* Arrange rows in a column */
+  row-gap: 20px; /* Add gap between rows */
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap; /* Enable wrapping of flex items */
+  gap: 20px; /* Increase gap to ensure enough space between fields */
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px; /* Add margin to create space between input fields */
+  flex: 1 1 auto; /* Flex-grow, flex-shrink, and flex-basis */
+  max-width: 100%; /* Ensure max width */
+}
+
+.form-field label {
+  margin: 10px; /* Increase margin to provide more space */
+  font-weight: 400;
+  text-align: start;
+  color: grey;
+  font-size: small;
+}
+
+.form-field input[type="text"],
+.form-field input[type="number"],
+.form-field input[type="email"],
+.form-field input[type="password"],
+.form-field input[type="url"],
+.form-field input[type="datetime-local"],
+.form-field input[type="date"],
+.form-field input[type="time"],
+.form-field input[type="file"],
+.form-field input[type="number"],
+.form-field select{
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.form-field input[type="text"]:hover,
+.form-field input[type="email"]:hover,
+.form-field input[type="number"]:hover,
+.form-field input[type="password"]:hover,
+.form-field input[type="url"]:hover,
+.form-field input[type="datetime-local"]:hover,
+.form-field input[type="date"]:hover,
+.form-field input[type="time"]:hover,
+.form-field input[type="file"]:hover,
+.form-field select:hover,
+.search-bar input:hover,
+.form-field textarea:hover {
+  border-color: #6366f1; /* indigo */
+  border-width: 2px; 
+}
+
+.form-field textarea {
+  width: 100%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical; 
+  line-height: 4; 
+  max-width: 100%; 
+}
+
+.radio-group, .checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.radio-group label, .checkbox-group label {
+  margin-right: 15px;
+  font-weight: 400;
+  color: grey;
+}
+
+.submit-button-container {
+  flex-basis: 100%; 
+  display: flex;
+  justify-content: center; /* Ensure the button is centered */
+  align-items: center; /* Center vertically if needed */
+  margin-top: 20px;
+}
+
+.submit-button {
+  background: #6366f1; /* Change to indigo */
+  color: white;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  width: auto; /* Adjust width to fit text */
+  min-width: fit-content; /* Ensure minimum width fits content */
+}
+
+.submit-button:hover {
+  background: #4f46e5; /* Hover color remains indigo */
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.allow-text-entry-dropdown,
+.dropdown {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.allow-text-entry-dropdown:hover,
+.dropdown:hover {
+    border-color: rgb(239, 125, 83);
+    border-width: 2px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  position: absolute; /* Position the search bar absolutely */
+  top: 60px; /* Position it below the title */
+  right: 20px; /* Position it at the right corner */
+}
+
+.search-bar input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.search-bar input:hover{
+  border: 1px solid rgb(239, 125, 83);
+}
+
+.search-button {
+  background: transparent; /* Make background transparent */
+  border: none;
+  cursor: pointer;
+  margin-left: 8px;
+  padding: 8px;
+  border-radius: 4px;
+  color: white;
+}
+
+.search-button:hover {
+  background: transparent; /* Keep background transparent on hover */
+}
+
+.search-button svg {
+  width: 20px;
+  height: 20px;
+  color: #6366f1; /* Change icon color to indigo */
+}
+
+.mandatory-label .mandatory-asterisk {
+  color: red;
+}
+
+.group-heading {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.group-heading:hover {
+  color: #6366f1; /* Change color on hover */
+}
+
+input::placeholder,
+textarea::placeholder,
+select::placeholder {
+  font-size: 14px; /* Set a consistent font size for all placeholders */
+  color: grey; /* Optional: Set a consistent color */
+}
+
+@media (max-width: 400px) {
+  .dynamic-form {
+    padding: 15px;
+    gap: 10px;
+    grid-template-columns: 1fr;
+  }
+
+  .form-title {
+    font-size: 20px;
+  }
+
+  .form-field label {
+    font-size: x-small;
+  }
+}
+
+@media (max-width: 600px) {
+  .search-bar {
+    position: static; /* Remove absolute positioning */
+    margin-top: 10px; /* Add margin to separate from the title */
+    width: 100%; /* Full width */
+    justify-content: center; /* Center align */
+  }
+
+  .search-bar input {
+    width: 70%; /* Adjust width for mobile view */
+  }
+
+  .search-button {
+    margin-left: 5px; /* Adjust margin for mobile view */
+  }
+
+  .form-row {
+    flex-direction: column; /* Arrange fields in a single column */
+    gap: 5px; /* Further reduce gap between fields */
+  }
+
+  .form-field {
+    flex-basis: 20%; /* Reduce flex-basis */
+    max-width: 100%; /* Ensure max width */
+    margin-bottom: 10px; /* Reduce margin-bottom */
+  }
+
+  .submit-row {
+    margin-top: 10px; /* Reduce margin-top */
+  }
+}
+
+@media (min-width: 600px) and (max-width: 900px) {
+  .search-bar {
+    margin-top: 25px; /* Full width */
+    justify-content: end; /* Center align */
+  }
+
+  .search-bar input {
+    width: 50%; /* Adjust width for tablet view */
+  }
+
+  .search-button {
+    margin-left: 5px; /* Adjust margin for tablet view */
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1200px) {
+  .dynamic-form {
+    padding: 20px;
+    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .form-title {
+    font-size: 22px;
+  }
+
+  .form-field label {
+    font-size: small;
+  }
+
+  .submit-button {
+    padding: 9px 18px;
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .dynamic-form {
+    padding: 25px;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
+  }
+
+  .form-title {
+    font-size: 24px;
+  }
+
+  .form-field label {
+    font-size: small;
+  }
+
+  .submit-button {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+}
+

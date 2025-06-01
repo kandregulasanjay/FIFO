@@ -1,0 +1,165 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: #ffffff; /* Change background to white */
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.survey-form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #ffffff; /* Change background to white */
+}
+
+.form-title {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.survey-form {
+  width: 95%;
+  max-width: 1200px;
+  background-color: #ffffff; 
+  padding: 30px;
+  border-radius: 8px; 
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.form-field label {
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #555;
+}
+
+.form-field input[type="text"],
+.form-field select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.form-field input[type="text"]:hover,
+.form-field select:hover {
+  border-color: #6366f1; /* indigo */
+}
+
+.radio-group, .checkbox-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.radio-group label, .checkbox-group label {
+  margin-bottom: 5px;
+  font-weight: 400;
+  color: #555;
+}
+
+.submit-button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.submit-button {
+  padding: 12px 25px;
+  background-color: #6366f1; /* bg-indigo-500 */
+  color: #ffffff; /* text-white */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.submit-button:hover {
+  background-color: #4f46e5; /* hover:bg-indigo-600 */
+}
+
+@media (max-width: 400px) {
+  .survey-form {
+    padding: 15px;
+    gap: 10px;
+  }
+
+  .form-title {
+    font-size: 24px;
+  }
+
+  .form-field {
+    font-size: 16px;
+  }
+
+  .submit-button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1200px) {
+  .survey-form {
+    padding: 25px;
+    gap: 15px;
+  }
+
+  .form-title {
+    font-size: 26px;
+  }
+
+  .form-field {
+    font-size: 17px;
+  }
+
+  .submit-button {
+    padding: 11px 22px;
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .survey-form {
+    padding: 30px;
+    gap: 20px;
+  }
+
+  .form-title {
+    font-size: 28px;
+  }
+
+  .form-field {
+    font-size: 18px;
+  }
+
+  .submit-button {
+    padding: 12px 25px;
+    font-size: 16px;
+  }
+}
